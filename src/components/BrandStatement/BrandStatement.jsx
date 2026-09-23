@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
+//this is export default function
 export default function BrandStatement() {
   const sectionRef = useRef(null);
   const text1Ref = useRef(null);
