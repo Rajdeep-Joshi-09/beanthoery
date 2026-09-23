@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
+//this is export default function
 export default function BrandStatement() {
   const sectionRef = useRef(null);
   const text1Ref = useRef(null);
@@ -28,9 +28,9 @@ export default function BrandStatement() {
       }, 0);
 
       // Text 1 mask reveal
-      tl.fromTo(text1Ref.current, 
+      tl.fromTo(text1Ref.current,
         { yPercent: 120, rotationX: -10, opacity: 0 },
-        { yPercent: 0, rotationX: 0, opacity: 1, duration: 1.5, ease: 'power4.out' }, 
+        { yPercent: 0, rotationX: 0, opacity: 1, duration: 1.5, ease: 'power4.out' },
         0
       );
 
@@ -40,7 +40,7 @@ export default function BrandStatement() {
         { yPercent: 0, rotationX: 0, opacity: 1, duration: 1.5, ease: 'power4.out' },
         0.8
       );
-      
+
       // Parallax out as you continue scrolling
       tl.to([text1Ref.current, text2Ref.current], {
         y: -150,
@@ -54,7 +54,7 @@ export default function BrandStatement() {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       id="brand-statement"
       className="relative w-full min-h-[120svh] flex flex-col items-center justify-center px-6 md:px-16 overflow-hidden pointer-events-auto"
@@ -62,7 +62,7 @@ export default function BrandStatement() {
     >
       <div className="max-w-5xl w-full text-center z-10 flex flex-col gap-6 md:gap-10">
         <div className="overflow-hidden py-2 perspective-1000">
-          <h2 
+          <h2
             ref={text1Ref}
             className="text-4xl md:text-6xl lg:text-8xl font-display uppercase leading-[1.1] text-bean-cream tracking-wide origin-bottom"
           >
@@ -70,7 +70,7 @@ export default function BrandStatement() {
           </h2>
         </div>
         <div className="overflow-hidden py-2 perspective-1000">
-          <h2 
+          <h2
             ref={text2Ref}
             className="text-4xl md:text-6xl lg:text-8xl font-serif italic leading-[1.1] text-bean-accent origin-bottom"
           >
